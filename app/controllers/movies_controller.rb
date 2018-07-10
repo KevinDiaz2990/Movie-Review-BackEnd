@@ -4,7 +4,8 @@ class MoviesController < ApplicationController
 
   # GET /movies
   def index
-    @example =  MovieService.result_Search('Harry Potter')
+    
+    @example =  MovieService.result_Search(params[:movie_title])
     render json: @example
   end
 
